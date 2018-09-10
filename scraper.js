@@ -24,7 +24,8 @@ const nick = new Nick({
 		function scrapeFrontPage() { // This function scrapes the front page, we are trying to get the location of each details!
 
 			$("tr").each((index, element) => {
-	
+				
+				var buttonToClick = "#view\\:_id1\\:_id247:repeatFacilities\\:" + rowIndex + "\\:td1"
 				var name = "#view\\:_id1\\:_id247\\:repeatFacilities\\:" + rowIndex + "\\:facilityNameLink";
 				var address= "#view\\:_id1\\:_id247\\:repeatFacilities\\:" + rowIndex + "\\:detailCF1";
 				var last = "#view\\:_id1\\:_id247\\:repeatFacilities\\:" + rowIndex + "\\:lastInspectionCF2";
