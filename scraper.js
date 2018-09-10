@@ -13,19 +13,13 @@ const nick = new Nick({
 	//console.log(await tab.getContent()) // log the page content to see what we can work with! In string form
 	const scrapedData = await tab.evaluate((arg, callback) => {
 		// Here we're in the page context. It's like being in your browser's inspector tool
+
+		//console.log(content.match(/formFacility\.xsp\?id\=\w{32}/g));
+
 		rowIndex = 0;
 		var data = [];
 
-		tab.getContent(function(err, content) {
-			if (err) {
-				console.log(err)
-			} else {
-				console.log(content);
-			}
-		})
-		//scrapeFrontPage();
-
-		//console.log(content.match(/formFacility\.xsp\?id\=\w{32}/g));
+		scrapeFrontPage();
 
 		function scrapeFrontPage() { // This function scrapes the front page, we are trying to get the location of each details!
 
